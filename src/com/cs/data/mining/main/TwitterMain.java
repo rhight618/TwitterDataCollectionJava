@@ -58,7 +58,9 @@ public class TwitterMain {
 		
 		try {
 			
-			users = TwitterData.getRetweeterData(authObject, 986716201144410112L);
+			//users = TwitterData.getRetweeterData(authObject, 986716201144410112L);
+			users = TwitterData.getRetweeterData(authObject, 1051047636558471169L);
+
 			writeCSV(users);
 
 		} catch (Exception e) {
@@ -72,7 +74,7 @@ public class TwitterMain {
 
 	private static void writeCSV(ResponseList<User> users) {
 
-		String SAMPLE_CSV_FILE = "./UserData.csv";
+		String SAMPLE_CSV_FILE = "./UserData-Daniel.csv";
 
 		try {
 			BufferedWriter writer = Files.newBufferedWriter(Paths.get(SAMPLE_CSV_FILE));
